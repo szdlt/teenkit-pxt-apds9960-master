@@ -525,7 +525,7 @@ namespace Gesture9960 {
         pads9960_init() {
 
             let aa = this.APDS9960ReadReg(0X92);
-            if (aa == 0xAB) {
+            if (aa == 0xAB || aa == 0xA8 || aa == 0x9C ) {
                 this.APDS9960WriteReg(0xA0, DEFAULT_GPENTH);//0x28
                 this.APDS9960WriteReg(0xA1, DEFAULT_GEXTH);//0x1e
                 this.APDS9960WriteReg(0xA2, DEFAULT_GCONF1);//0x40
